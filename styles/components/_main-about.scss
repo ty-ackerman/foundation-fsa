@@ -34,7 +34,7 @@
 }
 
 .about .quarter {
-	border: 1px solid black;
+	// border: 1px solid black;
 	position: relative;
 	bottom: 0;
 	transition: .3s all ease-out;
@@ -43,7 +43,7 @@
 	&:hover {
 		bottom: 30px;
 		a {
-			bottom: -41px;
+			bottom: -40px;
 		}
 	}
 	a {

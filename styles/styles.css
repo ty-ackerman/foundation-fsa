@@ -470,7 +470,6 @@ iframe {
     right: 50%; }
 
 .about .quarter {
-  border: 1px solid black;
   position: relative;
   bottom: 0;
   -webkit-transition: .3s all ease-out;
@@ -482,7 +481,7 @@ iframe {
   .about .quarter:hover {
     bottom: 30px; }
     .about .quarter:hover a {
-      bottom: -41px; }
+      bottom: -40px; }
   .about .quarter a {
     position: absolute;
     bottom: 0;
