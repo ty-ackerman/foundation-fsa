@@ -165,3 +165,19 @@ input::-moz-focus-inner {
 img {
 	max-width: 100%;
 }
+
+// CUSTOM STYLES
+.wrapper {
+	display: grid;
+	margin: 0 auto;
+	grid-template-areas: "left center right";
+	grid-template-columns: 10% 1fr 10%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
