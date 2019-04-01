@@ -1,0 +1,30 @@
+img:first-child {
+	height: 50px;
+}
+
+img:nth-child(2) {
+	width: 150px;
+}
+
+body {
+	background: white;
+}
+
+// ACTUAL STYLES START BELOW
+.top-nav-bar {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.top-nav-bar nav ul {
+	display: grid;
+	border: red solid 2px;
+	grid-template-columns: repeat(5, 100px);
+	li {
+		list-style: none;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
