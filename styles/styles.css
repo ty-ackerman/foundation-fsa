@@ -192,7 +192,7 @@ p,
 a {
   font-family: 'Roboto', sans-serif; }
 
-header {
+header.home {
   grid-column: left / right;
   display: -ms-grid;
   display: grid;
@@ -707,11 +707,10 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
     .footer__top .right > * {
-      width: 100%;
       text-align: center; }
     .footer__top .right .logo-container {
       width: 100px;
@@ -742,7 +741,12 @@ footer {
           font-size: 20px;
           width: 40px;
           height: 40px;
-          background: #df1c33; }
+          background: #df1c33;
+          -webkit-transition: .3s all ease-in;
+          -o-transition: .3s all ease-in;
+          transition: .3s all ease-in; }
+          .footer__top .right .media-icons .icon i:hover {
+            background-color: black; }
 
 .footer__bottom {
   padding: 10px 0; }
@@ -764,3 +768,66 @@ footer {
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
+
+header.about-us {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.2))), url("../../assets/hero/library.jpeg");
+  background: -webkit-linear-gradient(right rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/hero/library.jpeg");
+  background: -o-linear-gradient(right rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/hero/library.jpeg");
+  background: linear-gradient(to left rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/hero/library.jpeg");
+  height: 300px;
+  grid-column: 1 / -1;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "left center right";
+  -ms-grid-columns: 10% 1fr 10%;
+  grid-template-columns: 10% 1fr 10%; }
+  header.about-us .header-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: center;
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    font-size: 25px; }
+    header.about-us .header-content h1 {
+      text-shadow: 1px 1px 1px black; }
+    header.about-us .header-content:after {
+      content: "";
+      width: 40px;
+      bottom: -20px;
+      height: 2px;
+      background-color: #df1c33;
+      position: absolute; }
+
+section.history {
+  margin: 80px 0;
+  grid-column: 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "left center-left center-right right";
+  -ms-grid-columns: 10% 1fr 350px 10%;
+  grid-template-columns: 10% 1fr 350px 10%; }
+  section.history .history__content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: center-left;
+    margin-right: 20px; }
+    section.history .history__content h3 {
+      color: grey;
+      margin-bottom: 20px; }
+    section.history .history__content h2 {
+      margin: 20px 0; }
+  section.history .history__schools {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    background: #df1c33;
+    padding: 20px;
+    grid-area: center-right;
+    color: white; }
+    section.history .history__schools li {
+      margin-bottom: 10px; }
+    section.history .history__schools ul {
+      padding-left: 20px; }

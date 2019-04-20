@@ -61,9 +61,9 @@ footer {
 		margin-left: 20px;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
 		> * {
-			width: 100%;
+			// width: 100%;
 			text-align: center;
 		}
 		.logo-container {
@@ -90,7 +90,10 @@ footer {
 					width: 40px;
 					height: 40px;
 					background: $redMain;
-					// border: 1px solid black;
+					transition: .3s all ease-in;
+					&:hover {
+						background-color: black;
+					}
 				}
 			}
 		}

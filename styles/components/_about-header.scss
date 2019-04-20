@@ -1,0 +1,60 @@
+header.about-us {
+	background: linear-gradient(to left rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../../assets/hero/library.jpeg");
+	height: 300px;
+	grid-column: 1 / -1;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	display: grid;
+	grid-template-areas: "left center right";
+	grid-template-columns: 10% 1fr 10%;
+	.header-content {
+		grid-area: center;
+		position: absolute;
+		bottom: 40px;
+		color: white;
+		font-size: 25px;
+		h1 {
+			text-shadow: 1px 1px 1px black;
+		}
+		&:after {
+			content: "";
+			width: 40px;
+			bottom: -20px;
+			height: 2px;
+			background-color: $redMain;
+			position: absolute;
+		}
+	}
+}
+
+section.history {
+	margin: 80px 0;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-areas: "left center-left center-right right";
+	grid-template-columns: 10% 1fr 350px 10%;
+	.history__content {
+		grid-area: center-left;
+		margin-right: 20px;
+		h3 {
+			color: grey;
+			margin-bottom: 20px;
+		}
+		h2 {
+			margin: 20px 0;
+		}
+	}
+	.history__schools {
+		background: $redMain;
+		padding: 20px;
+		grid-area: center-right;
+		color: white;
+		li {
+			margin-bottom: 10px;
+		}
+		ul {
+			padding-left: 20px;
+		}
+	}
+}
