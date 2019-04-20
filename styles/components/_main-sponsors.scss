@@ -1,0 +1,68 @@
+.sponsors {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-areas: "left title carousel right";
+	grid-template-columns: 10% 300px 1fr 10%;
+	margin: 20px 0;
+	&__title {
+		grid-area: title;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: column wrap;
+	}
+	.image-container {
+		width: 30px;
+		// margin: 0 auto;
+	}
+}
+
+.carousel {
+	grid-area: carousel;
+}
+.carousel-cell {
+	width: 20%;
+	height: 200px;
+	// background: $redMain;
+	border-radius: 5px;
+	counter-increment: carousel-cell;
+	display: flex;
+	align-items: center;
+	.image-container {
+		width: 100%;
+		padding: 0 10px;
+	}
+}
+
+.sponsors__title {
+	h2 {
+		position: relative;
+		padding-bottom: 40px;
+		font-size: 30px;
+		&:after {
+			content: "";
+			height: 2px;
+			width: 40px;
+			background: $redMain;
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+		}
+	}
+	p {
+		margin-bottom: 20px;
+		width: 80%;
+	}
+
+	a {
+		// text-transform: uppercase;
+		color: $redMain;
+		text-decoration: none;
+		// padding: 10px 15px;
+		// background: $redMain;
+		transition: .1s ease-in all;
+		&:hover {
+			color: lighten($redMain, 30);
+		}
+	}
+}

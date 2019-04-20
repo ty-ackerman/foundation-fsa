@@ -220,10 +220,10 @@ header {
 .top-nav-bar {
   position: fixed;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
-  background: -webkit-linear-gradient(top, white, transparent);
-  background: -o-linear-gradient(top, white, transparent);
-  background: linear-gradient(to bottom, white, transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.4)));
+  background: -webkit-linear-gradient(top, white, rgba(255, 255, 255, 0.4));
+  background: -o-linear-gradient(top, white, rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
   padding: 20px 0;
   display: -ms-grid;
   display: grid;
@@ -560,3 +560,77 @@ section.apply-now {
       padding: 10px 15px;
       -webkit-box-shadow: 1px 1px 10px black;
       box-shadow: 1px 1px 10px black; }
+
+.sponsors {
+  grid-column: 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "left title carousel right";
+  -ms-grid-columns: 10% 300px 1fr 10%;
+  grid-template-columns: 10% 300px 1fr 10%;
+  margin: 20px 0; }
+  .sponsors__title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: title;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap; }
+  .sponsors .image-container {
+    width: 30px; }
+
+.carousel {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: carousel; }
+
+.carousel-cell {
+  width: 20%;
+  height: 200px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .carousel-cell .image-container {
+    width: 100%;
+    padding: 0 10px; }
+
+.sponsors__title h2 {
+  position: relative;
+  padding-bottom: 40px;
+  font-size: 30px; }
+  .sponsors__title h2:after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    background: #df1c33;
+    position: absolute;
+    bottom: 20px;
+    left: 0; }
+
+.sponsors__title p {
+  margin-bottom: 20px;
+  width: 80%; }
+
+.sponsors__title a {
+  color: #df1c33;
+  text-decoration: none;
+  -webkit-transition: .1s ease-in all;
+  -o-transition: .1s ease-in all;
+  transition: .1s ease-in all; }
+  .sponsors__title a:hover {
+    color: #f3a1ab; }

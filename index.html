@@ -13,7 +13,9 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Cantata+One|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    
 </head>
 <body>
     <div class="wrapper">
@@ -31,7 +33,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Supporters</a></li>
+                        <li><a href="#">Apply</a></li>
                         <li><a href="#">Fundraising</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -140,7 +142,80 @@
             </div>
 
         </section>
+        <section class="sponsors">
+            <div class="sponsors__title">
+                <h2>Sponsors</h2>
+                <p>Special thank you to our amazing sponsors who help make everything we do possible</p>
+                <a href="">Become a sponsor</a>
+            </div>
+            <div class="carousel" data-flickity='{
+                "autoPlay": true,
+                "prevNextButtons": false,
+                "pageDots": false, 
+                "wrapAround": true,
+                "cellAlign": "left",
+                "draggable": false
+             }'>
+             <div class="carousel-cell bank">
+                 <div class="image-container">
+                     <img src="./assets/sponsors/bank.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell rc">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/rc.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell techy">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/techy.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell michael">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/michael.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell skilled-trades">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/skilled-trades.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell ibmg">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/ibmg.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell ">
+                    <div class="image-containeraok">
+                        <img src="./assets/sponsors/aok.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell fm">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/fm.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="carousel-cell jerk">
+                    <div class="image-container">
+                        <img src="./assets/sponsors/jerk.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+              
+
+        </section>
     </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script>
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
