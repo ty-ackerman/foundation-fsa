@@ -1,0 +1,78 @@
+.team-members {
+	margin: 40px 0;
+	grid-column: center;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 50px;
+	.member {
+		//  display: grid;
+		// grid-template-columns: 225px 1fr;
+		// grid-gap: 30px;
+		.image-container {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+	}
+	.text-container {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: flex-start;
+		.name {
+			color: $redMain;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.position {
+			color: grey;
+		}
+		.bio {
+			margin-top: 10px;
+			height: 210px;
+			overflow: hidden;
+		}
+		input {
+			display: none;
+			&:checked ~ .bio {
+				height: 100%;
+			}
+			&:checked ~ .label-container .open {
+				display: none;
+			}
+			&:checked ~ .label-container .close {
+				display: block;
+			}
+			&:checked ~ .label-container::before {
+				display: none;
+			}
+			&:not(:checked) ~ .label-container .close {
+				display: none;
+			}
+		}
+		.label-container {
+			&::before {
+				content: "...";
+				display: inline-block;
+				position: relative;
+				color: grey;
+				font-size: 12px;
+			}
+		}
+		label.open,
+		label.close {
+			margin: 0 auto;
+			color: $redMain;
+			cursor: pointer;
+			transition: .1s ease-in all;
+			font-size: 12px;
+			&:hover {
+				color: lighten($redMain, 30);
+			}
+		}
+		label.close {
+			text-align: left;
+			// margin-left: 20px;
+			margin-top: 10px;
+		}
+	}
+}

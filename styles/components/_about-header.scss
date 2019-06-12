@@ -1,5 +1,5 @@
-header.about-us {
-	background: linear-gradient(to left rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../../assets/hero/library.jpeg");
+header.about-us,
+header.team {
 	height: 300px;
 	grid-column: 1 / -1;
 	background-size: cover;
@@ -28,21 +28,35 @@ header.about-us {
 	}
 }
 
+header {
+	background-color: rgb(185, 185, 185);
+}
+
+header.about-us {
+	background: linear-gradient(to left rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../../assets/hero/library.jpeg");
+}
+
 section.history {
 	margin: 80px 0;
 	grid-column: 1 / -1;
 	display: grid;
-	grid-template-areas: "left center-left center-right right";
-	grid-template-columns: 10% 1fr 350px 10%;
+	grid-template-areas: "left center-left center center-right right";
+	grid-template-columns: 10% 250px 1fr 350px 10%;
 	.history__content {
-		grid-area: center-left;
+		grid-column: center-left / center;
 		margin-right: 20px;
 		h3 {
-			color: grey;
+			color: rgb(148, 148, 148);
 			margin-bottom: 20px;
+			line-height: 30px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
 		}
 		h2 {
 			margin: 20px 0;
+		}
+		p {
+			line-height: 30px;
 		}
 	}
 	.history__schools {
@@ -50,11 +64,77 @@ section.history {
 		padding: 20px;
 		grid-area: center-right;
 		color: white;
+		text-align: center;
+		max-height: 320px;
+		h2 {
+			text-shadow: 1px 1px 1px #000;
+			text-align: center;
+		}
 		li {
 			margin-bottom: 10px;
+			text-align: left;
+			&:last-child {
+				padding-bottom: 10px;
+			}
 		}
 		ul {
 			padding-left: 20px;
+		}
+		a {
+			background-color: white;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: black;
+		}
+	}
+
+	.student-quote {
+		grid-area: center-left;
+		grid-row: 2;
+		.quote-container {
+			display: grid;
+			grid-template-areas: "left right";
+			grid-template-columns: 20px 1fr;
+			// border: 1px solid rgb(214, 214, 214);
+			// border-left: 3px $redMain solid;
+			position: relative;
+			padding: 0 15px;
+			background: linear-gradient(to right, rgba(224, 46, 46, .1), transparent);
+			padding-bottom: 10px;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 3px;
+				height: 100%;
+				left: 0;
+				// top: 53%;
+				// transform: translateY(-50%);
+				background-color: $redMain;
+			}
+		}
+		.quote {
+			grid-column: right;
+			margin-top: 15px;
+			margin-left: 5px;
+			font-size: 14px;
+			line-height: 25px;
+		}
+		.quote-symbol {
+			grid-column: left;
+			color: $redMain;
+			font-size: 50px;
+		}
+		.quote-author {
+			grid-column: right;
+			margin-top: 10px;
+			// text-align: right;
+			width: 170px;
+			justify-self: flex-end;
+			font-size: 14px;
+			.full-name {
+				color: $redMain;
+				font-weight: bold;
+			}
 		}
 	}
 }
